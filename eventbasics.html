@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: #414141;color:aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+        <li><img width="200px" id="japan" src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToHSA2JQAMwAoQVcaxvKgNYiSuERCQvmcYenrH0u6pvbXmD-lWqiROeFo&s" alt=""></li>
+        <li><img width="200px" id="river" src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqkzKWCxkWTWZsNAlyN9CM5JhjkfL1ZLod7tKN6--2iaRY9woKWzyHBO0&s" alt="" onclicl="alert"></li>
+        <li><img width="200px" id="owl" src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJdbgeUO_3l8XCCG7hapnAZYobKJWKjwH4rmYmYQAk6psEyXFxvLZ4BbA&s" alt=""></li>
+    </ul>
+    </div>
+</body>
+<script>
+// document.getElementById('river').onclick=function(){
+//     alert("river")
+// }
+//attachEvent()
+//jquery-on
+// document.getElementById('images').addEventListener('click',function(e){
+//     e.preventDefault();
+//     e.stopPropagation()
+//     console.log("google clicked");
+//     alert("clicked inside the ul")
+// },false)
+
+    document.querySelector('# images').addEventListener
+    ('click',function(e){
+      console.log(e.target.parentNode);
+
+      if(e.target.tagName=='IMG'){
+        console.log(e.target.id);
+        let removeIt=e.target.parentNode
+        removeIt.remove()
+      }
+    // let removeIt=e.target.parentNode
+    // //removeIt.remove()
+    // removeIt.parentNode.removeChild(removeIt)
+    // removeIt.remove()
+ })
+    </script>
+
+</html>
